@@ -36,8 +36,8 @@
                 </div>
                 <div class="row px-0 image-drop">
                     <!-- <label for="formFileSm" class="form-label">Small file input example</label>-->
-                    <input type="number" class="form-control" placeholder="Height" aria-label="Username">
-                    <input type="number" class="form-control" placeholder="Width" aria-label="Username">
+                    <input type="number" class="form-control" placeholder="Height" step = "1" id="g-height" >
+                    <input type="number" class="form-control" placeholder="Width" step= "1" id="g-width">
                 </div>
 
 
@@ -50,7 +50,7 @@
 
                 <div class="row px-0 image-drop">
                     <!-- <label for="formFileSm" class="form-label">Small file input example</label> -->
-                    <button type="button" onclick="searchWord()" class="btn choice-btn btn-primary py-2">Taking A
+                    <button type="button" onclick="searchWord()"  class="btn choice-btn btn-primary py-2 dummy">Taking A
                         Picture</button>
                     <button type="button" onclick="typeWord()" class="btn choice-btn btn-primary py-2">Type Them
                         In</button>
@@ -70,7 +70,7 @@
                         <h5>Write words you want to find here!</h5>
                     </div>
                     <div class="row px-0 image-drop">
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                        <input type="text" class="form-control" id = "search-words" placeholder="Username" aria-label="Username">
                     </div>
                 </div>
 
@@ -115,7 +115,11 @@
         </div>
 
         <div class = "row pt-1 text-center">
-            <button type="button" class="btn btn-primary solve-btn">Solve</button>
+            <button type="button" id = "solver-btn" class="btn btn-primary solve-btn mb-2">Solve</button>
+        </div>
+
+        <div class = "row pt-1 text-center" id = "errors" >
+            
         </div>
 
         

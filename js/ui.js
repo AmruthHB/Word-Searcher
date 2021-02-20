@@ -4,19 +4,21 @@ const typeDiv = document.getElementById('type-in-words');
 const imageUpload = document.getElementById('crossword-upload');
 const initialRender = document.getElementById('original-crossword-view');
 const solvedRender = document.getElementById('solved-crossword-view');
+const errorShow = document.getElementById('errors');
 ///console.log("poo");
 
 
 // functions
 
 // load rendering
-loadButtonState = () => {
+loadState = () => {
     searchDiv.style.display = "none";
     typeDiv.style.display = "none";
+    errorShow.style.display = "none";
 }
 
 loadImgPreviewState = () =>{
-    let initLink = "https://lh3.googleusercontent.com/proxy/50822HTCbMCQmA0sLtn5PaBb_DjgMZsSrkCyOON6ThD30h0BxRHBzc-RP9gcaWGHEjpogjUgfT0"
+    let initLink = "https://www.ledr.com/colours/grey.jpg";
     initialRender.setAttribute("src",initLink);
     solvedRender.setAttribute("src",initLink);
 }
@@ -42,7 +44,7 @@ imageUpload.addEventListener("change", (e) =>{
 // internal event listeners (in HTML)
 searchWord = () => {
     //let wordFind = 
-    if (searchDiv.style.display == "none") {
+    if (searchDiv.style.display === "none") {
         searchDiv.style.display = "block";
     } else {
         searchDiv.style.display = "none";
@@ -51,7 +53,7 @@ searchWord = () => {
 
 typeWord = () => {
     //let wordType = 
-    if (typeDiv.style.display == "none") {
+    if (typeDiv.style.display === "none") {
         typeDiv.style.display = "block";
     } else {
         typeDiv.style.display = "none";
@@ -61,5 +63,5 @@ typeWord = () => {
 
 
 // main
-loadButtonState();
+loadState();
 loadImgPreviewState();
