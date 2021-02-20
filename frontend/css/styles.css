@@ -1,0 +1,34 @@
+.image-drop{
+    margin-left:25%;
+    margin-right:25%;
+}
+
+.image-drop input{
+    width:100%;
+    margin: 2% 0;
+}
+
+.choice-btn{
+    margin: 2% 25%;
+    width:50%;
+    display:block;
+}
+
+
+
+.image-preview img{
+    margin-left: 25%;
+    margin-right: 25%;
+    width:50%;
+    height:50%;
+}
+
+.solve-btn{
+    width:16%;
+    margin-left: 42%;
+    margin-right: 42%;
+}
+
+.dummy{
+    display:none;
+}
