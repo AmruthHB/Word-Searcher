@@ -6,6 +6,9 @@ Created on Fri Feb 19 19:21:52 2021
 """
 
 
+
+
+from image_to_grid import ImageToGrid
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource,request
 import json
@@ -18,17 +21,20 @@ parser = reqparse.RequestParser()
 parser.add_argument('query')
 
 class dummy_test(Resource):
-    def get(self):
+    def post(self):
         #args = parser.parse_args()
-        user_query = request.get_json()
-        p = user_query.get('query')
-        #args = request.args
-        #user_query = args['query']
+        user_query = request.get_json('application/json')
+        print(user_query['gHeight'], file=sys.stderr)
+        transformer = ImageToGrid(user_query['img'],user_query['gHeight'],
+                                  user_query['gWidth'],user_query['search'])
+        transformer.form_word_grid()
+        word_grid = transformer.grid
         
-        print(p, file=sys.stderr)
+        print(word_grid, file=sys.stderr)
+
         #print(user_query)
-        q = "dinosaur"
-        return q
+       
+        return user_query
 
 api.add_resource(dummy_test, '/')
 

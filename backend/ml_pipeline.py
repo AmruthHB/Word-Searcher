@@ -8,6 +8,7 @@ import math
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+import pytesseract
 
 class ImageDataTransform:
     def __init__(self,img):
@@ -139,12 +140,24 @@ class ImageDataTransform:
         
         return dilated_im
 
+"""
 if __name__ == "__main__":
+    
+    #pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
     im = cv2.imread("crossword.jpg")
     d = ImageDataTransform(im)
     res = d.preprocess(d.img)
-    plt.imshow(res,cmap = "gray")
+    q = res[0:85,704:792]
+    q = cv2.GaussianBlur(q,(3,3),0) 
+    kernel = np.ones((2,2), np.uint8) 
+    q = cv2.dilate(q, kernel, iterations=1) 
+   
+    plt.imshow(q,cmap="gray")
+    data = pytesseract.image_to_string(q,lang = 'eng',config ="--psm 10 --oem 3")
+    print(data[0])
+    #plt.imshow(res,cmap = "gray")
     #cv2.imwrite('C:\\Users\\amrut\\Desktop\\word-search-solver\\OCR\\cross.jpg',res)
-
+  
+"""
 
 

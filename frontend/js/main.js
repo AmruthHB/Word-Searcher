@@ -62,22 +62,14 @@ errorRender = (errorObj) =>{
 
 sendRequest = (obj) =>{
     let jsonObj = JSON.stringify(obj);
-    let testObj = {
-        query:'my dog eats logs'
-    }
-    let poo = JSON.stringify(testObj);
-    console.log(JSON.stringify(testObj))
     const xhr = new XMLHttpRequest();
     let url = "http://127.0.0.1:5000/";
     //console.log(jsonObj);
-    xhr.open("GET",url);
+    xhr.open("POST",url);
     xhr.onload = (e) => {
-        
-           console.log(xhr.responseText);
-        
+        console.log(xhr.responseText);  
     };
-    
-    xhr.send(poo);
+    xhr.send(jsonObj);
 };
 
 solver.addEventListener("click", () => {
