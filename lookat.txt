@@ -1,2 +1,0 @@
-https://medium.com/javarevisited/connecting-flask-with-node-js-7b9d823ca923
-https://www.youtube.com/watch?v=6BozpmSjk-Y
