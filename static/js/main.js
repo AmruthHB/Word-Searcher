@@ -84,7 +84,8 @@ sendRequest = (obj) =>{
     spinnerShow()
     let jsonObj = JSON.stringify(obj);
     const xhr = new XMLHttpRequest();
-    let url = "http://127.0.0.1:5000/solve_search";
+    //let url = "http://127.0.0.1:5000/solve_search";
+    let url = "https://word-searcher.herokuapp.com/solve_search"
     xhr.open("POST",url);
     xhr.onload = (e) => {
         spinnerHide()
