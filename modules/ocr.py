@@ -13,6 +13,7 @@ from google.cloud import vision
 import io
 
 #os.environ['GOOGLE_APPLICATION_CREDENTIALS'] ='modules/vision_key.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
 
 def detect_document(img):
     """Detects document features in an image."""
