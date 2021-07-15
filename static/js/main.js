@@ -89,6 +89,7 @@ sendRequest = (obj) =>{
     xhr.open("POST",url);
     xhr.onload = (e) => {
         spinnerHide()
+        console.log("sent")
         let imSrc = `data:image/jpg;base64, ${xhr.responseText}`  
         const searchWords = document.getElementById('solved-crossword-view');
         searchWords.src = imSrc;

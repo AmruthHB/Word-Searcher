@@ -1,4 +1,6 @@
 # based off an algorithm found on geeks on geeks
+# https://www.geeksforgeeks.org/search-a-word-in-a-2d-grid-of-characters/
+
 def find_word(row,col,word,grid):
   dirs = [[-1, 0], [1, 0], [1, 1],
           [1, -1], [-1, -1], [-1, 1],
