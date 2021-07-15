@@ -7,7 +7,7 @@ Created on Fri Feb 19 18:28:05 2021
 import math
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 #import pytesseract
 
 class ImageDataTransform:
