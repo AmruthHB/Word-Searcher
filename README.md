@@ -13,7 +13,8 @@
 #### Improvements
  ##### String Search
   - Currently, a naive string search is used to find substrings in a 2d array. This can be sped up.
-  - Potential solutions could involve sacrificing space for faster results: storing diagonal, horizontal vertical arrays, and finding algorithms to perform substring searches
+  - Potential solutions could involve sacrificing space for faster results: storing diagonal, horizontal vertical arrays, and finding fast algorithms to perform substring searches.
+  - Looking into using tries?
 
  #### OCR 
   - Most critical part. 
