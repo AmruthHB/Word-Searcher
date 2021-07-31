@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/")
 def main():
     return render_template('index.html')
-
+# hello world
 
 @app.route("/solve_search",methods = ["POST"])
 def grid_solve():
