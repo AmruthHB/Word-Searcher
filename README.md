@@ -7,7 +7,7 @@
 
 #### Current Issues
 - *Unfortunately, downloading locally requires a cloud vision api key,which needs to be added to the modules folder as a json
-- *Heroku cannot process image in backend due to the backend taking about 2 minutes to process the image, time limit for heroku requests is 30 seconds This is mostly due to the long duration of performing OCR with cloud vision api.
+-
 
 #### Improvements
  ##### String Search
